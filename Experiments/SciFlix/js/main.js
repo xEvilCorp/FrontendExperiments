@@ -14,4 +14,15 @@ $('.owl-carousel').owlCarousel({
             items:5
         }
     }
-})
+});
+
+$(document).ready(function(){
+    $(window).scroll(function () {
+      if($(document).scrollTop() > 50){
+        $("header").css('background','#141414');
+      }
+      else{
+        $("header").css('background','');
+      }
+    });
+  });

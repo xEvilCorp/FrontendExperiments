@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 :root {
     --vermelho: #E50914;
     --preto:#141414;
@@ -16,6 +17,14 @@ body {
     font-family: 'Calibri Light', sans-serif;
 }
 
+header {
+    background: linear-gradient(rgb(0 70 111 / 54%), rgb(0 0 0 / 0%));
+    position: fixed;
+    z-index: 9999999;
+    width: 100%;
+    
+}
+
 header .container {
     display: flex;
     align-items: center;
@@ -23,28 +32,48 @@ header .container {
 }
 
 header .logo {
-    margin-left: 5px;
-    color: var(--vermelho);
-    font-family: 'Arial Black', Times;
-    font-size: 40px;
+    margin-top: 5px;
+    margin-left: -10px;
+    margin-right: 35px;
+    width: 130px;
+    height: 60px;
+    filter: brightness(900);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons i {
+    margin-left: 20px;
+    font-size: 1.2em;
 }
 
 header nav a {
     text-decoration: none;
-    color: #aaa;
-    margin-right: 10px;
+    color: #e5e5e5ce;
+    margin-right: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+header nav a.selected {
+    color: white;
 }
 
 header nav a:hover {
-    color: #fff;
+    transition: 0.3s;
+    opacity: 0.7;
 }
 
 
 .filme-principal {
     font-size: 16px;
-    background: linear-gradient(90deg, rgba(0,0,0,1), rgba(0,0,0,0.1)), url(../img/expanse_background.png);
+    background:linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0)) , url(../img/expanse_background.png);
     background-size: cover;
-    height: 400px;
+    padding-top: 180px;
+    padding-bottom: 130px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,27 +83,42 @@ header nav a:hover {
 .filme-principal .desc {
     margin-bottom: 40px;
     margin-top: 10px;
-    text-align: justify;
-    max-width: 450px;
+    font-family: -webkit-pictograph;
+    text-shadow: 0px 2px 6px rgb(108 241 241 / 50%);
+    font-size: 18px;
+    max-width: 470px;
 
 }
 
 .filme-principal  .titulo {
-    margin-top: 20px;
-    font-size: 40px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-width: 300px;
+}
+
+.filme-principal .about {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size:  22px;
+    text-shadow: 2px 2px 4px rgb(245 255 255 / 26%);
+    font-family: Helvetica,Arial,sans-serif;
+
 }
 
 .botao {
-    background-color: rgba(0,0,0,.5);
-    border: none;
+    background-color: rgb(0 29 33 / 50%);
+    border: 1px solid #298592;
     color: white;
     padding: 15px 30px;
     margin-right: 15px;
     font-size: 12px;
     cursor: pointer;
     transition: .3s ease all;
-    border-radius: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.botao:nth-child(1) {
+    background-color: white;
+    color: black;
 }
 .botao:hover {
     background-color: white;
@@ -85,8 +129,11 @@ header nav a:hover {
     margin-right: 8px;
 }
 
+
+
 .container {
-    margin-left: 20px;
+    margin-left: 45px;
+    margin-right: 45px;
 }
 
 .box-filme {
@@ -97,9 +144,22 @@ header nav a:hover {
 
 @media screen and (max-width: 700px) {
     header .container {
-        display: flex;
+        display: block;
         flex-direction: column;
+        margin: auto;
+        text-align: center;
     }
+    
+.nav-links {
+    display: block;
+}
+
+.nav-buttons {
+    margin-left: -63px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 
     .botao {
         margin-top: 5px;
@@ -107,8 +167,20 @@ header nav a:hover {
     }
 }
 
+.titulo-carrosel {
+    margin-top: 30px;
+    margin-left: 45px;
+    margin-bottom: 20px;
+}
 .carrosel-filmes {
     margin-top: 5px;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+.seamless-block {
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(#14141400, var(--preto));
+    margin-top: -100px;
 }
