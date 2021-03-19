@@ -1,7 +1,7 @@
 # Sci-fi Netflix
 
 
-## Preview
+## Preview - <a href="https://xevilcorp.github.io/FrontendExperiments/Experiments/SciFlix/">Visit Page ↵</a>
 
 ![image](./img/preview.jpg)
 
