@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Snake Game</title>
+</head>
+<body>
+    <main>
+        <h1>SNAKE THE APPLES!</h1>
+        <p>Press ←↑→↓ to play.</p>
+        <div class="canvas-container">
+            <canvas id="snake" width="512" height="512"></canvas>
+            <div id="score">Score: 0</div>
+        </div>
+    </main>
+
+
+    <div id="fim-container" style="display: none;">
+        <div id="fim">
+            <h2>FIM</h2>
+            <hr>
+            <h3 id="message"></h3>
+            <hr>
+            <button onclick="restartGame();">Play Again</button>
+        </div>
+    </div>
+    <script src="js/script.js" type="text/javascript"></script>
+
+</body>
+</html>
