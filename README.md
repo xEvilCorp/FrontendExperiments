@@ -14,7 +14,7 @@
 
    * [Instagram Home](./Experiments/InstagramHome)
    * [Sci-fi Netflix](./Experiments/SciFlix)
-   * [Sci-fi Netflix](./Experiments/SnakeGame)
+   * [Snake Game](./Experiments/SnakeGame)
 
    
 
