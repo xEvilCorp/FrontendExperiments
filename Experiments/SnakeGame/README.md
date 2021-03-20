@@ -5,7 +5,11 @@
 
 ![image](./imgs/preview.gif)
 
-### Reproduction of a classic snake game with javascript including score, continuous snake sprites, sounds and restart feature.
+#### Reproduction of a classic snake game with javascript. <br>Includes:
+- Score
+- Continuous snake sprites
+- Sounds and
+- Restart feature.
 
 <br>
 Based on "Recreating the snake game with Javascript" <br>By <a href="http://www.github.com/SpruceGabriela">Gabriela Pinheiro</a> at 
