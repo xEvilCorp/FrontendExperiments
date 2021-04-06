@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ShoppingListItemCard from './components/ShoppingListItemCard';
+import { toCurrencyBRL } from './helpers/CurrencyConverter.js';
 import './App.css';
 import axios from 'axios';
 
@@ -27,9 +29,42 @@ function App() {
 
   return (
     <div className="app">
-      <header className="app-header">
-      </header>
-    </div>
+    <header className="app-header">
+      <button onClick={() => loadList("abaixo-10-reais")}>
+        ABAIXO DE R$10
+      </button>
+      <button onClick={() => loadList("acima-10-reais")}>
+        ACIMA DE R$10
+      </button>
+    </header>
+    <main>
+
+      <h1 id="title">Meu carrinho</h1>
+      <hr/>
+
+      <section id="items-list">
+        {shoppingListItems.map((item, i) => {
+          return <ShoppingListItemCard key={i} item={item} />
+        })}
+      </section>
+      
+      <hr/>
+
+      <div id="totals-info">
+        <p>Total</p><p id="total">{toCurrencyBRL(shoppingListTotal)}</p>
+      </div>
+
+      {shoppingListTotal/100 > 10 &&
+        <div className="green-alert">
+          <p>Parabéns, sua compra tem frete grátis !</p>
+        </div>
+      }
+
+      <hr/>
+
+      <button id="finalize-button">Finalizar compra</button>
+    </main>
+  </div>
   );
 }
 
