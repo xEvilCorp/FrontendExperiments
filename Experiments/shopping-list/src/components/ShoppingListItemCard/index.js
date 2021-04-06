@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import { toCurrencyBRL } from '../../helpers/CurrencyConverter.js';
 
 function ShoppingListItemCard({ item }) {
     return (
@@ -9,8 +10,8 @@ function ShoppingListItemCard({ item }) {
             </div>
             <section className="item-card-info">
                 <h3 className="item-name">{item.name}</h3>
-                <p className="item-price">{item.price}</p>
-                <p className="item-selling-price">{item.sellingPrice}</p>
+                <p className="item-price">{toCurrencyBRL(item.price)}</p>
+                <p className="item-selling-price">{toCurrencyBRL(item.sellingPrice)}</p>
             </section>
         </article>
     );
