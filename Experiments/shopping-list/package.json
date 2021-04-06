@@ -8,6 +8,8 @@
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3"
   },
+  "homepage": "https://xevilcorp.github.io/FrontendExperiments/Experiments/shopping-list/build/",
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
